@@ -34,15 +34,12 @@ public class login {
 			  PreparedStatement pstmt  = con.conn.prepareStatement(sql);
 			  pstmt.setString(1,username);
 			  ResultSet rs  = pstmt.executeQuery();
-			  if(rs.getInt(1)==0 {
-					System.out.println("username exist");
+			  if(rs.getInt(1)==0) {
+					System.out.println("username no exist");
 			  }else {
-				  String sql1 = "insert into user(username,password)values(?,?)";
-				  PreparedStatement pstmt1  = con.conn.prepareStatement(sql1);
-				  pstmt1.setString(1,username);
-				  pstmt1.setString(2,password);
-				  pstmt1.executeUpdate();
-				  System.out.print("user crée");
+				 
+				  System.out.print("user connecter");
+				  System.out.print("redirect to home ");
 			  }
 		}
 	}

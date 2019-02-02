@@ -43,6 +43,7 @@ public class register {
 				  pstmt1.setString(2,password);
 				  pstmt1.executeUpdate();
 				  System.out.print("user crée");
+				  System.out.print("redirect to home ");
 			  }
 		}
 	}
