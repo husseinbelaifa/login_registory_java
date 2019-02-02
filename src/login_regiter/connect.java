@@ -35,7 +35,7 @@ public class connect {
 		this.connexion();
 		 stmt = this.conn.createStatement();
 		  String sql = "CREATE TABLE user " +
-                  "(id INT NOT NULL primary key," +
+                  "(id INTEGER NOT NULL primary key AUTOINCREMENT," +
                   " username        varchar(50) NOT NULL, " + 
                   " password varchar(50)     NOT NULL)" ;
                 
