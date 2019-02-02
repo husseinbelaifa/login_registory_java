@@ -40,6 +40,9 @@ public class register {
 				  String sql1 = "insert into user(username,password)values(?,?)";
 				  PreparedStatement pstmt1  = con.conn.prepareStatement(sql1);
 				  pstmt1.setString(1,username);
+				  
+				
+				  
 				  pstmt1.setString(2,password);
 				  pstmt1.executeUpdate();
 				  System.out.print("user crée");

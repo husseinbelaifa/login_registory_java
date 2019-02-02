@@ -30,9 +30,10 @@ public class login {
 		}else {
 			   connect con=new connect();
 			   con.connexion();
-			  String sql = "SELECT count(*) from user where username=?";
+			  String sql = "SELECT count(*) from user where username=? and password=?";
 			  PreparedStatement pstmt  = con.conn.prepareStatement(sql);
 			  pstmt.setString(1,username);
+			  pstmt.setString(2,password);
 			  ResultSet rs  = pstmt.executeQuery();
 			  if(rs.getInt(1)==0) {
 					System.out.println("username no exist");
